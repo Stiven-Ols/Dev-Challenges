@@ -27,7 +27,6 @@ body {
 
 /*============== NAV - BAR ==============*/
 header {
-    width: 100%;
     height: 70px;
     background-color: var(--background-color);
     display: flex;
@@ -179,13 +178,94 @@ header {
     width: 700px;
     height: 500px;
     box-shadow: 15px 15px 18px -7px rgba(255,255,255,0.59);
-
 }
 
 .right-content-img img {
     width: 100%;
     height: 100%;
 }
+
+/* Estilos para la versión móvil */
+@media screen and (max-width: 390px) {
+    /* Agregar un margin de 12px a todos los elementos */
+    body, header, .container, .secciones, .left, .right-content, .right-content-img {
+        margin: 12px;
+    }
+  
+    /* Alinear logo y hamburguesa en las esquinas */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 0 12px;
+    }
+
+    .container {
+        padding: 0;
+        margin: 0;
+    }
+  
+    .logo {
+        margin: 0;
+        padding: 8px;
+    }
+  
+    .hamburger {
+        margin: 0;
+        padding: 8px;
+    }
+  
+    /* Ajustar tamaño de fuente y padding de las opciones del menú */
+    .nav-bar ul li a {
+        font-size: 14px;
+        padding: 3px 5px;
+    }
+  
+    /* Cambiar a columnas en la versión móvil */
+    .secciones {
+    margin: 0;
+        flex-direction: column; /* 1 columna */
+    }
+
+    .right-content-img {
+        width: 351px;
+        height: 264.32px;
+        box-shadow: none;
+    }
+
+    .hamburger {
+        padding: 0;
+    }
+
+    .overlay {
+        position: static;
+        bottom: -100px !important; /* Ajusta la distancia desde abajo */
+        right: 32px; 
+        width: 300px !important;
+        height: 138px !important;
+    }
+
+    .overlay-content-text h4 {
+        font-size: 12px !important;
+    }
+    
+    .overlay-content-text p {
+        font-size: 12.19px !important;
+    }
+    
+    .overlay-body-sub {
+        font-size: 18px !important;
+    }
+    
+    .overlay-header-img {
+        width: 36.59px !important;
+        height: 36.59px !important;
+    }
+}
+  
+  
 
 /*========== overlay ==========*/
 .overlay {
